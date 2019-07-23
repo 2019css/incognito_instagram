@@ -1,5 +1,4 @@
 from selenium import webdriver
-import getpass
 
 url = 'https://www.instagram.com/accounts/login/?source=auth_switcher'
 id = 'seoultechcss'
