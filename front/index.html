@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Landing Page - Start Bootstrap Theme</title>
+  <title>Hello</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -20,6 +20,11 @@
 
   <!-- Custom styles for this template -->
   <link href="css/landing-page.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 
 </head>
 
@@ -48,7 +53,7 @@
                 <input type="email" class="form-control form-control-lg" placeholder="Enter your Instagram ID">
               </div>
               <div class="col-12 col-md-3">
-                <button type="submit" class="btn btn-block btn-lg btn-primary" onclick="UserMove(1)">Search</button>
+                <button type="button" class="btn btn-block btn-lg btn-primary" onclick="UserMove('1')">Search</button>
               </div>
               <div class="col-12 col-md-9 mb-2 mb-md-0" style="padding: 8px 1px 1px 1px;">
                 <a class="text-blue clearfix small z-1" data-toggle="modal" href="#SendTextModal">인스타그램 ID가 비공개 계정이라면?</a>
@@ -149,18 +154,13 @@
     </div>
   </footer>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-
   <!--Search 누르면 자동으로 스크롤 이동하는 거-->
   <script>
-      function UserMove(seq){
-          var offset = $("#div" + seq).offset();
-          var winH = $(window).height();
-          $('html, body').animate({scrollTop : (offset.top - winH/10)}, 400);
-      }
+    function UserMove(seq){
+        var offset = $("#div" + seq).offset();
+        var winH = $(window).height();
+        $('html, body').animate({scrollTop : (offset.top - winH/10)}, 400);
+    }
   </script>
 
 </body>
