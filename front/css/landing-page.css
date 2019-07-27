@@ -71,16 +71,31 @@ header.masthead h1 {
   padding-bottom: 7rem;
 }
 
+.features-icons2 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
 .features-icons .features-icons-item {
   max-width: 20rem;
+}
+
+.features-icons2 .features-icons-item2 {
+  max-width: 10rem;
 }
 
 .features-icons .features-icons-item .features-icons-icon {
   height: 7rem;
 }
-
+.features-icons2 .features-icons-item2 .features-icons-icon2 {
+  height: 7rem;
+}
 .features-icons .features-icons-item .features-icons-icon i {
   font-size: 4.5rem;
+}
+
+.features-icons2 .features-icons-item2 .features-icons-icon2 i {
+  font-size: 10rem;
 }
 
 .features-icons .features-icons-item:hover .features-icons-icon i {

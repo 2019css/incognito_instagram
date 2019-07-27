@@ -58,26 +58,36 @@
               <div class="col-12 col-md-9 mb-2 mb-md-0" style="padding: 8px 1px 1px 1px;">
                 <a class="text-blue clearfix small z-1" data-toggle="modal" href="#SendTextModal">인스타그램 ID가 비공개 계정이라면?</a>
               </div>
-                <div class="modal fade" id="SendTextModal" role="dialog">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 style="color:dimgrey"><strong>Private Account - Help</strong></h5>
-                        <button type="button" class="close" data-dismiss="modal">×</button>
+             <!-- Full Height Modal Right -->
+              <div class="modal fade right" id="SendTextModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-full-height modal-right" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="myModalLabel" style="color: black">Help > 비공개 계정</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="form-group" style="padding: 20px 0px 0px 0px;">
+                        <i class="icon-question m-auto text-primary" style="font-size: 60px""></i>
                       </div>
-                      <div class="modal-body">
-                        <p style="color:crimson"><strong>친구 요청이 수락된 경우에만 서비스를 이용할 수 있습니다.</strong></p>
-                        <div class="form-group">
-                            <label for="privateID" style="color:crimson"><strong>아래 ID로 친구 요청을 합니다.</strong></label>
-                            <input type="privateID" class="form-control" id="privateID" placeholder="ID를 입력해주세요.">
-                          </div>
+                      <div class="form-group" style="padding: 10px 10px 0px 0px;">
+                        <p style="color:black">친구 요청이 수락된 경우에만 서비스를 이용할 수 있습니다.</p>
+                        <label for="privateID" style="color:black">아래 ID로 친구 요청을 합니다.</label>
                       </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="javascript:closeButton()">확인</button>
+                      <div class="form-group" style="padding: 10px 10px 10px 10px;">
+                          <input type="privateID" class="form-control" id="privateID" placeholder="ID를 입력해주세요.">
                       </div>
                     </div>
+                    <div class="modal-footer justify-content-center">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                      <button type="button" class="btn btn-primary">요청</button>
+                    </div>
                   </div>
+                </div>
               </div>
+              <!-- Full Height Modal Right --> 
             </div>
           </div>
         </div>
