@@ -2,7 +2,7 @@ from selenium import webdriver
 
 url = 'https://www.instagram.com/accounts/login/?source=auth_switcher'
 id = 'seoultechcss'
-pw = 'csslab716'
+pw = ''
 user_id = 'seonghun1195'
 driver = webdriver.Chrome('C:\\Users\\happy\\Desktop\\git\\incognito_instagram\\crawling\\chromedriver.exe')
 driver.implicitly_wait(3)
