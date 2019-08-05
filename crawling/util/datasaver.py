@@ -15,7 +15,7 @@ class Datasaver:
             file_profile = os.path.join(Settings.profile_location, username + '.json')
 
         with open(file_profile, 'w',encoding='UTF-8-sig') as fp:
-            fp.write(json.dumps(information, ensure_ascii=False))
+            fp.write(json.dumps(information, indent=4, ensure_ascii=False))
 
     def save_profile_commenters_txt(username, user_commented_list):
         check_folder(Settings.profile_commentors_location)
