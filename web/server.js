@@ -1,22 +1,18 @@
-var express = require('express');
+var express = require("express");
 var app = express();
-var bodyParser = require('body-parser');
-var router = require('./router/main')(app);
-var greet = require('./app');
 
-app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
-app.engine('html', require('ejs').renderFile);
+var appRoute = require("./router/appRoute");
+var main = require("./router/main");
 
-var server = app.listen(3000, function(){
-    console.log("Express server has started on port 3000")
-});
+app.set("views", __dirname + "/views");
+app.set("view engine", "ejs");
+app.engine("html", require("ejs").renderFile);
+app.use(express.static("views"));
+app.use(express.json());
 
-app.use(express.static('views'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended : true}));
+app.use("/", main);
+app.use("/app", appRoute);
 
-app.post('/app', function(req,res){
-    greet();
-    res.send("Hi");
+app.listen(3000, function() {
+  console.log("Express server has started on port 3000");
 });
