@@ -26,7 +26,6 @@ parts/
 sdist/
 var/
 profiles/
-assets/
 *.egg-info/
 .installed.cfg
 *.egg
