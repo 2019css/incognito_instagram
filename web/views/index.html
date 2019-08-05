@@ -25,6 +25,7 @@
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="/views"></script>
 
 </head>
 
@@ -63,7 +64,7 @@
                 <div class="modal-dialog modal-full-height modal-right" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="myModalLabel" style="color: black">Help >> 비공개 계정</h5>
+                      <h5 class="modal-title" id="myModalLabel" style="color: black">Help - 비공개 계정</h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
@@ -73,16 +74,15 @@
                         <i class="icon-info m-auto text-primary" style="font-size: 60px""></i>
                       </div>
                       <div class="form-group" style="padding: 10px 10px 0px 0px;">
-                        <p style="color:black">친구 요청이 수락된 경우에만 서비스를 이용할 수 있습니다.</p>
-                        <label for="privateID" style="color:black">아래 ID로 친구 요청을 합니다.</label>
+                        <p style="color:black">맞팔로우인 경우에만 서비스를 이용할 수 있습니다.</p>
+                        <label for="privateID" style="color:black">아래 ID로 팔로우 요청을 합니다.</label>
                       </div>
-                      <div class="form-group" style="padding: 10px 10px 10px 10px;">
-                          <input type="privateID" class="form-control" id="privateID" placeholder="ID를 입력해주세요.">
+                      <div class="form-group" style="padding: 10px 10px 0px 0px;">
+                        <form action="/app" method="POST" style="display:inline-block">  
+                          <input type="privateID" class="form-control" id="privateID" placeholder="ID를 입력해주세요." name="friendID">
+                          <input type="submit" class="btn btn-primary" onclick="friend()" data-dismiss="modal" value="팔로우 전송" style="display:inline-block">
+                        </form>
                       </div>
-                    </div>
-                    <div class="modal-footer justify-content-center">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
-                      <button type="button" class="btn btn-primary">요청</button>
                     </div>
                   </div>
                 </div>
@@ -171,6 +171,11 @@
         var winH = $(window).height();
         $('html, body').animate({scrollTop : (offset.top - winH/10)}, 400);
     }
+  </script>
+  <script>
+    function friend(){
+      alert('팔로우 요청을 하였습니다. 맞팔로우해주세요.');
+    } 
   </script>
 
 </body>
