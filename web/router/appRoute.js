@@ -8,7 +8,7 @@ function greetfrom(friendID) {
   // Python 실행
   var options = {
     scriptPath: 'crawling/',
-    args: ['fiendID']
+    args: [friendID]
   };
   
   pyShell.run('request_follow.py', options, function(err, results){
