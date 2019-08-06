@@ -1,14 +1,22 @@
 var express = require("express");
+var pyShell = require('python-shell');
 var router = express.Router();
 
-/**
- * 
- * @param {String} friendID 이름
- */
+
 function greetfrom(friendID) {
-  console.log("실행: ", friendID);
-  // 인스타그램 요청보내기
+  
+  // Python 실행
+  var options = {
+    scriptPath: 'crawling/',
+    args: ['fiendID']
+  };
+  
+  pyShell.run('request_follow.py', options, function(err, results){
+    if(err) throw err;
+    console.log('result: %j', results);
+  });
 }
+
 
 /* GET home page. */
 router.post("/great", function(req, res, next) {
