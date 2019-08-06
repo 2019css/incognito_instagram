@@ -37,6 +37,6 @@ driver.find_element_by_xpath('/html/body/div[3]/div/div/div[3]/button[2]').click
 
 #go to user
 driver.get('https://www.instagram.com/{}/'.format(user_id))
-driver.implicitly_wait(1)
+driver.implicitly_wait(3)
 #click follow
-driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/header/section/div[1]/button').click()
+driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/header/section/div[1]/div[1]/span/span[1]/button').click()
