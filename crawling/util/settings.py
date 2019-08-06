@@ -28,8 +28,8 @@ class Settings:
     # Set a logger cache outside object to avoid re-instantiation issues
     loggers = {}
 
-    login_username = ''
-    login_password = ''
+    login_username = 'seoultechcss'
+    login_password = 'csslab716'
 
     #chromedriver
     chromedriver_min_version = 2.36
