@@ -45,13 +45,13 @@ except Exception as exc:
     
     
 try:
-    usernames = get_all_user_names()
+    usernames = get_all_user_names() # cli_helper.py
     for username in usernames:
         print('Extracting information from ' + username)
         information = []
         user_commented_list = []
         try:
-            information, user_commented_list = extract_information(browser, username, Settings.limit_amount)
+            information, user_commented_list = extract_information(browser, username, Settings.limit_amount) # extractor.py
         except:
             print("Error with user " + username)
             sys.exit(1)
