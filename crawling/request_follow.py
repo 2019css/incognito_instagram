@@ -10,19 +10,19 @@ OS_ENV = "windows" if p_os == "win32" else "osx" if p_os == "darwin" else "linux
 if len(sys.argv) != 2:
     sys.exit('input two parameter')
 
-chromedriver_min_version = 2.36
-specific_chromedriver = "chromedriver_{}".format(OS_ENV)
-chromedriver_location = os.path.join(BASE_DIR, "assets", specific_chromedriver)
+# chromedriver_min_version = 2.36
+# specific_chromedriver = "chromedriver_{}".format(OS_ENV)
+# chromedriver_location = os.path.join(BASE_DIR, "assets", "chromedriver.exe")
 
-if not os.path.exists(chromedriver_location):
-    chromedriver_location = os.path.join(BASE_DIR, 'assets', 'chromedriver')
+# if not os.path.exists(chromedriver_location):
+#     chromedriver_location = os.path.join(BASE_DIR, 'assets', 'chromedriver.exe')
 
 url = 'https://www.instagram.com/accounts/login/?source=auth_switcher'
 id = 'seoultechcss'
 pw = 'csslab716'
 
 user_id = sys.argv[1]
-driver = webdriver.Chrome(chromedriver_location)
+driver = webdriver.Chrome('chromedriver.exe')
 driver.implicitly_wait(3)
 driver.get(url)
 driver.implicitly_wait(1)
